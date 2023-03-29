@@ -736,6 +736,7 @@ class __PaneItemExpanderState extends State<_PaneItemExpander>
                     onPressed: () {
                       widget.onItemPressed?.call(item);
                       Navigator.pop(context);
+                      item.onTap?.call();
                     },
                     isSelected: body.pane!.isSelected(item),
                   );
